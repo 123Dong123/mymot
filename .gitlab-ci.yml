@@ -1,0 +1,20 @@
+stages:
+  - build
+  - test
+  - deploy
+  
+build:
+  stage: build
+  only:
+    - dev
+  script:
+    - python /home/gitlab-runner/OTM/frontend/script-dev.py
+
+deploy:
+  stage: deploy
+  only:
+    - dev
+  script:
+    - echo " running deploy to frontend server"
+    - cd /home/gitlab-runner/OTM/frontend
+    - ./run-dev.sh

@@ -1,0 +1,6 @@
+{
+	"proxy":"http://52.20.71.152:8080",
+    "https-proxy":"http://52.20.71.152:8080",
+    "directory": "webapp/bower_components",
+	"strict-ssl": false
+}
